@@ -1,0 +1,44 @@
+# Core Requirements
+fastapi==0.109.1
+uvicorn==0.27.0
+python-dotenv==1.0.0
+pydantic==2.6.1
+
+# OpenAI/LLM Integration
+openai==1.12.0
+langchain==0.1.11
+tiktoken==0.5.2
+
+# Streamlit & Chat Components
+streamlit==1.29.0
+streamlit-chat==0.1.0  # For chat interface components
+streamlit-extras==0.3.0  # Additional UI components
+
+# GCP Deployment (if using App Engine)
+gunicorn==21.2.0
+google-cloud-secret-manager==2.16.1
+google-auth==2.22.0
+
+# Database (if needed)
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9  # PostgreSQL
+
+# Testing
+pytest==7.4.4
+pytest-cov==4.1.0
+httpx==0.26.0
+
+# Utils
+numpy==1.26.3
+pandas==2.1.4
+python-multipart==0.0.6
+tenacity==8.2.3
+
+# Visualization
+plotly==5.18.0
+altair==5.2.0  # Often used with Streamlit
+
+# Code Quality
+black==23.12.1
+flake8==6.1.0
+mypy==1.7.1
