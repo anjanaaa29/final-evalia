@@ -1,0 +1,26 @@
+# === Streamlit App Framework ===
+streamlit==1.35.0
+streamlit-mic-recorder==0.0.5
+
+# === Google Cloud STT ===
+google-cloud-speech==2.26.0
+
+# === LLM / API Integration ===
+groq==0.6.0
+python-dotenv==1.0.1
+
+# === Whisper (OpenAI STT) ===
+openai-whisper==20231117
+torch==2.2.2
+
+# === Data Handling & Visualization ===
+pandas==2.2.2
+plotly==5.21.0
+
+# === Audio + Numerical Processing ===
+soundfile==0.12.1
+numpy==1.26.4
+
+# === Typing, NLP, and Extras ===
+typing-extensions==4.12.0
+spacy==3.7.4
