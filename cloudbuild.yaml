@@ -1,0 +1,26 @@
+steps:
+  # Step 1: Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/evalia2929/streamlit-whisper-app', '.']
+
+  # Step 2: Push Docker image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/evalia2929/streamlit-whisper-app']
+
+  # Step 3: Deploy to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      [
+        'run', 'deploy', 'streamlit-whisper-app',
+        '--image', 'gcr.io/evalia2929/streamlit-whisper-app',
+        '--platform', 'managed',
+        '--region', 'us-central1',
+        '--allow-unauthenticated',
+        '--port', '8501',
+        '--set-env-vars', 'GROQ_API_KEY=${_GROQ_API_KEY}'
+      ]
+
+# Substitution for secure injection
+substitutions:
+  _GROQ_API_KEY: "dummy"
